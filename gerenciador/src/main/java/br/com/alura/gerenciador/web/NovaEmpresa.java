@@ -27,12 +27,14 @@ public class NovaEmpresa extends HttpServlet{
 		Empresa empresa = new Empresa(nome);
 		new EmpresaDAO().adiciona(empresa);
 		
-		PrintWriter writer = resp.getWriter();
-		writer.println("<html>");
-		writer.println("<body>");
-		writer.println("Empresa " + nome + " foi adicionada com sucesso!");
-		writer.println("</body>");
-		writer.println("</html>");
+		req.getRequestDispatcher("/WEB-INF/paginas/novaEmpresa.jsp").forward(req, resp);
+		
+//		PrintWriter writer = resp.getWriter();
+//		writer.println("<html>");
+//		writer.println("<body>");
+//		writer.println("Empresa " + nome + " foi adicionada com sucesso!");
+//		writer.println("</body>");
+//		writer.println("</html>");
 	}
 
 }
