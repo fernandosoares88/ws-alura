@@ -12,11 +12,11 @@
     Você está logado como ${usuarioLogado.email}<br />
 	</c:if>
 	<br />
-	<a href="busca">Listar Empresas</a>
+	<a href="executa?tarefa=BuscaEmpresa">Listar Empresas</a>
 	<br /> Insira uma nova empresa:
 	<br />
 
-	<form action="fazTudo?tarefa=NovaEmpresa" method="post">
+	<form action="executa?tarefa=NovaEmpresa" method="post">
 		<div>
 			<label>Nome:</label> <input type="text" name="nome">
 		</div>
@@ -41,7 +41,7 @@
 
 	Faça logout:
 	<br />
-	<form action="fazTudo?tarefa=Logout" method="post">
+	<form action="executa?tarefa=Logout" method="post">
 		<button type="submit">Logout</button>
 	</form>
 </body>
