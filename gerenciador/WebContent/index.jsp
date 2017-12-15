@@ -16,7 +16,7 @@
 	<br /> Insira uma nova empresa:
 	<br />
 
-	<form action="novaEmpresa" method="post">
+	<form action="fazTudo?tarefa=NovaEmpresa" method="post">
 		<div>
 			<label>Nome:</label> <input type="text" name="nome">
 		</div>
