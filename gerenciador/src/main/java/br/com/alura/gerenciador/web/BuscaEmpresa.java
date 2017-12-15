@@ -31,19 +31,8 @@ public class BuscaEmpresa extends HttpServlet {
 		String filtro = req.getParameter("filtro");
 		Collection<Empresa> empresas = new EmpresaDAO().buscaPorSimilaridade(filtro);
 
-		PrintWriter writer = resp.getWriter();
-		writer.println("<html>");
-		writer.println("<body>");
-		writer.println("Resultado da busca: <br />");
-
-		writer.println("<ul>");
-		for (Empresa empresa : empresas) {
-			writer.println("<li>" + empresa.getId() + ": " + empresa.getNome() + "</li>");
-		}
-		writer.println("</ul>");
-
-		writer.println("</body>");
-		writer.println("</html>");
+		req.setAttribute("empresas", empresas);
+		req.getRequestDispatcher("/WEB-INF/paginas/buscaEmpresa.jsp").forward(req, resp);
 
 	}
 
