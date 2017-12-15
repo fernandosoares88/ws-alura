@@ -39,7 +39,7 @@
 
 	Faça logout:
 	<br />
-	<form action="logout" method="post">
+	<form action="fazTudo?tarefa=Logout" method="post">
 		<button type="submit">Logout</button>
 	</form>
 </body>
