@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
@@ -7,7 +9,7 @@
 <body>
 	Bem vindo ao nosso gerenciador de empresas!
 	<c:if test="${usuarioLogado!=null}">
-    Você está logado como ${usuarioLogado.email}<br />
+    VocÃª estÃ¡ logado como ${usuarioLogado.email}<br />
 	</c:if>
 	<br />
 	<a href="busca">Listar Empresas</a>
