@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -5,7 +6,11 @@
 </head>
 <body>
 	Bem vindo ao nosso gerenciador de empresas!
-	<br /> <a href="busca">Listar Empresas</a>
+	<c:if test="${usuarioLogado!=null}">
+    Você está logado como ${usuarioLogado.email}<br />
+	</c:if>
+	<br />
+	<a href="busca">Listar Empresas</a>
 	<br /> Insira uma nova empresa:
 	<br />
 
