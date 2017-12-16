@@ -30,7 +30,6 @@ public class Controller extends HttpServlet {
 			req.getRequestDispatcher(pagina).forward(req, resp);
 
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
