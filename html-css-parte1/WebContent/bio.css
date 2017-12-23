@@ -13,6 +13,11 @@ main h1 {
 	color: #FFF;
 	padding: 25px;
 	border-bottom: 10px solid black;
+	font-size: 60px;
+}
+
+main h2 {
+	font-size: 30px;
 }
 
 main a {
@@ -21,9 +26,18 @@ main a {
 
 main div {
 	width: 720px;
-/* 	margin-left: auto; */
-/* 	margin-right: auto; */
+	/* 	margin-left: auto; */
+	/* 	margin-right: auto; */
 	margin: auto;
+	padding: 30px 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
 }
 
 h1, h2 {
@@ -32,6 +46,7 @@ h1, h2 {
 
 p {
 	text-align: justify;
+	margin: 20px 0;
 }
 
 blockquote, aside, footer {
@@ -41,15 +56,21 @@ blockquote, aside, footer {
 blockquote {
 	background-color: #D9E5E3;
 	border: 10px solid #C2CCCA;
-	margin: 0;
+	margin: 20px 40px;
 	width: 250px;
 	box-sizing: border-box;
+	width: 250px;
 }
 
 aside {
 	background-color: #3C1D3D;
 	color: #F2FFFC;
 	text-align: center;
+}
+
+aside h1 {
+	font-size: 30px;
+	margin-bottom: 25px;
 }
 
 aside a {
