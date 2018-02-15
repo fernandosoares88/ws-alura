@@ -21,7 +21,8 @@ h1, h2 {
 
 main {
 	float: left;
-	width: 80%;
+	width: 85%;
+	padding-bottom: 80px;
 }
 
 #titulo-pagina {
@@ -49,56 +50,18 @@ main {
 	color: #851944;
 }
 
-.texto-pagina article {
-	padding-bottom: 30px;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 20px;
-}
-
 .texto-pagina p {
 	text-align: justify;
 	margin: 20px 0;
 }
 
-.link-leia-mais {
-	text-align: center;
-	font-size: 24px;
-	margin: 16px;
-	padding: 8px;
-	background-color: #E6E7E8;
-	display: block;
-}
-
-.citacoes-profissionais {
-	background-color: #D9E5E3;
-	border: 10px solid #C2CCCA;
-	margin: 20px 40px;
-	width: 250px;
-	box-sizing: border-box;
-	width: 250px;
-	padding: 20px;
-}
-
-.citacoes-profissionais cite {
-	float: right;
-	font-style: italic;
-	display: block;
-}
-
-.fiat {
-	float: right;
-}
-
-.petrobras {
-	float: left;
-}
-
 .foto-pessoal {
-	float: right;
-	width: 20%;
 	border-bottom: 10px solid black;
 	border-left: 10px solid black;
 	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .navegacao-site {
@@ -108,11 +71,13 @@ main {
 	text-align: center;
 	float: right;
 	clear: right;
-	width: 15%;
 	border-bottom: 10px solid black;
 	border-left: 10px solid black;
 	box-sizing: border-box;
 	border-left: 10px solid black;
+	width: 15%;
+	position: relative;
+	top: 310px;
 }
 
 .navegacao-site h1 {
@@ -141,15 +106,15 @@ main {
 }
 
 .imagem-github {
-	background-image: url(github.png);
+	background-image: url(../img/menu/github.png);
 }
 
 .imagem-twitter {
-	background-image: url(twitter.png);
+	background-image: url(../img/menu/twitter.png);
 }
 
 .imagem-linkedin {
-	background-image: url(linkedin.png);
+	background-image: url(../img/menu/linkedin.png);
 }
 
 #rodape-pagina {
@@ -157,4 +122,8 @@ main {
 	color: #F2FFFC;
 	padding: 20px;
 	clear: both;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }

@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.citacoes-profissionais {
+	background-color: #D9E5E3;
+	border: 10px solid #C2CCCA;
+	margin: 20px 40px;
+	width: 250px;
+	box-sizing: border-box;
+	width: 250px;
+	padding: 20px;
+}
+
+.citacoes-profissionais cite {
+	float: right;
+	font-style: italic;
+	display: block;
+}
+
+.fiat {
+	float: right;
+}
+
+.petrobras {
+	float: left;
+}
