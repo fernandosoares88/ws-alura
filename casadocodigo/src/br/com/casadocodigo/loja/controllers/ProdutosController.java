@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -27,7 +28,7 @@ public class ProdutosController {
 		return modelAndView;
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@PostMapping
 	public ModelAndView gravar(Produto produto, RedirectAttributes redirectAttributes) {
 		System.out.println(produto);
 		produtoDao.gravar(produto);
@@ -35,11 +36,19 @@ public class ProdutosController {
 		return new ModelAndView("redirect:produtos");
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
+	@GetMapping
 	public ModelAndView listar() {
 		List<Produto> produtos = produtoDao.listar();
 		ModelAndView modelAndView = new ModelAndView("/produtos/lista");
 		modelAndView.addObject("produtos", produtos);
 		return modelAndView;
+	}
+	
+	@PostMapping("/remover")
+	public ModelAndView remover(Produto produto, RedirectAttributes redirectAttributes) {
+		System.out.println(produto);
+		produtoDao.remover(produto);
+		redirectAttributes.addFlashAttribute("sucesso", "Produto removido com sucesso!");
+		return new ModelAndView("redirect:produtos");
 	}
 }

@@ -9,6 +9,7 @@
 	Casa do Código</title>
 </head>
 <body>
+	<c:import url="../menu.jsp"></c:import>
 	<form action="/casadocodigo/produtos" method="post">
 		<div>
 			<label>Título</label>

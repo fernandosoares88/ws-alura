@@ -20,6 +20,10 @@ public class ProdutoDAO {
 	public void gravar(Produto produto) {
 		manager.persist(produto);
 	}
+	
+	public void remover(Produto produto){
+		manager.remove(produto);
+	}
 
 	public List<Produto> listar() {
 		return manager.createQuery("select p from Produto p", Produto.class).getResultList();
